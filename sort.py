@@ -36,6 +36,10 @@ def bubble_sort(arr, visualize=False):
             print(f"Zbývá {n-i} čísel")
         if not swapped:
             break
+        plt.ioff()
+    plt.show(block=False)
+    wait(1)
+    plt.close("all")
 
 def selection_sort(arr):
     n = len(arr)
@@ -49,12 +53,6 @@ def selection_sort(arr):
             print(f"Zbývá {n-i} čísel")
 
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
-
-
-    plt.ioff()
-    plt.show(block=False)
-    wait(1)
-    plt.close("all")
 
 
 print("Number sorter\nStiskni Ctrl+c pro ukončení\n----------")
